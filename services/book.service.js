@@ -43,8 +43,8 @@ function save(car) {
 	}
 }
 
-function getEmptyBook(vendor = "", speed = "") {
-	return { vendor, speed }
+function getEmptyBook(name = "", description = "") {
+	return { name, description }
 }
 
 function getDefaultFilter() {
@@ -68,9 +68,9 @@ function _createBooks() {
 	let books = loadFromStorage(BOOK_KEY)
 	if (!books || !books.length) {
 		books = [
-			_createBook("Harry Potter"),
-			_createBook("Green Street Holigans"),
-			_createBook("Shrek", "Shrek and Fiona!"),
+			_createBook(1),
+			_createBook(2),
+			_createBook(3, "Shrek and Fiona!"),
 		]
 		saveToStorage(BOOK_KEY, books)
 	}
