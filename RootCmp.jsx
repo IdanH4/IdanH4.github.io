@@ -9,7 +9,7 @@ import { BookEdit } from "./cmps/BookEdit.jsx"
 
 export function RootCmp() {
 	return (
-		<Router>
+		<Router basename="/idanh4.github.io">
 			<section className="main">
 				<Routes>
 					<Route path="/" element={<HomePage />} />
